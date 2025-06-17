@@ -31,9 +31,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-  flutter_native_splash: ^2.4.6
   flutter_svg: ^2.1.0
-  persistent_bottom_nav_bar: ^6.2.1
+  iconify_flutter: ^0.0.7
+  persistent_bottom_nav_bar_v2: ^6.0.1
+  smooth_page_indicator: ^1.2.1
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -69,19 +70,6 @@ flutter:
     - family: Rubik
       fonts:
         - asset: assets/fonts/Rubik-Regular.ttf
-  
-flutter_native_splash:
-  color: "#ffffff"
-  image: assets/images/nawel.png
-  android: true
-  ios: true
-  fullscreen: true
-  image_size: 200 # 👈 makes the image ~200 logical pixels wide
-
-  android_12:
-    image: assets/images/nawel.png
-    color: "#ffffff"
-    image_size: 200
 
 flutter_assets:
   assets_path: assets/images/
