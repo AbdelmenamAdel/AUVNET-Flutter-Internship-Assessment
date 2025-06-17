@@ -1,4 +1,4 @@
-import 'package:auvnet_internship_task/Features/generated/app_images.dart';
+import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:auvnet_internship_task/core/widgets/custom_elevated_button.dart';
 import 'package:auvnet_internship_task/core/widgets/custom_text_field.dart';
