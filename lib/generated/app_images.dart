@@ -1,46 +1,46 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-
+  
   /// Assets for bannar
   /// assets/images/bannar.png
   static const String bannar = "assets/images/bannar.png";
 
   /// Assets for barbar
-  /// assets/images/barbar.svg
-  static const String barbar = "assets/images/barbar.svg";
+  /// assets/images/barbar.png
+  static const String barbar = "assets/images/barbar.png";
 
   /// Assets for beirut
-  /// assets/images/beirut.svg
-  static const String beirut = "assets/images/beirut.svg";
+  /// assets/images/beirut.png
+  static const String beirut = "assets/images/beirut.png";
 
   /// Assets for drinks
-  /// assets/images/drinks.svg
-  static const String drinks = "assets/images/drinks.svg";
+  /// assets/images/drinks.png
+  static const String drinks = "assets/images/drinks.png";
 
-  /// Assets for falafel
-  /// assets/images/falafel.svg
-  static const String falafel = "assets/images/falafel.svg";
+  /// Assets for flafel
+  /// assets/images/flafel.png
+  static const String flafel = "assets/images/flafel.png";
 
   /// Assets for food
-  /// assets/images/food.svg
-  static const String food = "assets/images/food.svg";
+  /// assets/images/food.png
+  static const String food = "assets/images/food.png";
 
   /// Assets for girl
-  /// assets/images/girl.svg
-  static const String girl = "assets/images/girl.svg";
+  /// assets/images/girl.png
+  static const String girl = "assets/images/girl.png";
 
   /// Assets for groceries
-  /// assets/images/groceries.svg
-  static const String groceries = "assets/images/groceries.svg";
+  /// assets/images/groceries.png
+  static const String groceries = "assets/images/groceries.png";
 
   /// Assets for laffah
-  /// assets/images/laffah.svg
-  static const String laffah = "assets/images/laffah.svg";
+  /// assets/images/laffah.png
+  static const String laffah = "assets/images/laffah.png";
 
   /// Assets for nav1
-  /// assets/images/nav1.svg
-  static const String nav1 = "assets/images/nav1.svg";
+  /// assets/images/nav1.png
+  static const String nav1 = "assets/images/nav1.png";
 
   /// Assets for nav2
   /// assets/images/nav2.svg
@@ -82,3 +82,4 @@ class Assets {
   /// assets/images/shourtcut5.svg
   static const String shourtcut5 = "assets/images/shourtcut5.svg";
 }
+
