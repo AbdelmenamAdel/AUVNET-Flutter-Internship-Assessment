@@ -1,5 +1,5 @@
 import 'package:auvnet_internship_task/Features/welcome/views/on_boarding.dart';
-import 'package:auvnet_internship_task/Features/generated/app_images.dart';
+import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatefulWidget {

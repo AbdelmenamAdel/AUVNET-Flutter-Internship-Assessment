@@ -1,7 +1,7 @@
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:auvnet_internship_task/Features/auth/login_view.dart';
-import 'package:auvnet_internship_task/Features/generated/app_images.dart';
+import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:auvnet_internship_task/core/widgets/custom_elevated_button.dart';
 
 import '../model/on_boarding_model.dart';
