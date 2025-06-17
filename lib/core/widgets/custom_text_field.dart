@@ -1,3 +1,4 @@
+import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -13,7 +14,7 @@ class CustomTextField extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: const Color(0xFFC4C4C4).withOpacity(0.2),
+        color: AppColor.containerColor.withOpacity(0.2),
         borderRadius: BorderRadius.circular(12),
       ),
       child: TextField(
