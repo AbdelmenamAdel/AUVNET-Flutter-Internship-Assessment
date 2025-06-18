@@ -15,7 +15,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<AuthSignUpRequested>(_onSignUp);
     on<AuthLogoutRequested>(_onLogout);
   }
-  late Map<String, dynamic> userInfo;
+  static Map<String, dynamic>? userInfo;
   Future<void> _onLogin(
     AuthLoginRequested event,
     Emitter<AuthState> emit,
@@ -34,7 +34,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
 
-      final userInfo = await SupabaseConfig.client
+      userInfo = await SupabaseConfig.client
           .from('users')
           .select()
           .eq('id', response.user!.id)
@@ -102,6 +102,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       log("Sign Up error: $e");
       emit(state.copyWith(isLoading: false, msg: e.toString()));
     }
+  }
+
+  static Future<void> getUserInfo() async {
+    userInfo = await SupabaseConfig.client
+        .from('users')
+        .select()
+        .eq('id', SupabaseConfig.client.auth.currentUser!.id)
+        .maybeSingle();
+    log("userInfo: $userInfo");
   }
 
   Future<void> _onLogout(

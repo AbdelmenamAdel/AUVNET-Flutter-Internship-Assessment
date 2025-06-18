@@ -1,5 +1,4 @@
 import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_bloc.dart';
-import 'package:auvnet_internship_task/core/di/services_locator.dart';
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:auvnet_internship_task/generated/app_images.dart';
@@ -10,6 +9,7 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthBloc.getUserInfo();
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -52,10 +52,7 @@ class CustomAppBar extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Hi, Hepa!",
-                      // "Hi" + sl<AuthBloc>().userInfo['fullName'] ??
-                      //     'Hepa'
-                      //         "!",
+                      "Hi, ${AuthBloc.userInfo?['full_name']}!",
                       style: TextStyle(
                         fontSize: 30,
                         fontFamily: AppFonts.rubik,
