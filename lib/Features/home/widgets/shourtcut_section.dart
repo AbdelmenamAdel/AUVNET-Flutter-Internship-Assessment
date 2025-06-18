@@ -43,7 +43,7 @@ class _ShortCutSectionState extends State<ShortCutSection> {
         final nextPage = (_pageController.page!.toInt() + 1) % images.length;
         _pageController.animateToPage(
           nextPage,
-          duration: Duration(milliseconds: 200),
+          duration: Duration(milliseconds: 350),
           curve: Curves.easeInOut,
         );
       }

@@ -1,6 +1,7 @@
+import 'package:auvnet_internship_task/core/database/local/cache_helper.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:auvnet_internship_task/Features/auth/login_view.dart';
+import 'package:auvnet_internship_task/Features/auth/presentation/views/login_view.dart';
 import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:auvnet_internship_task/core/widgets/custom_elevated_button.dart';
 
@@ -91,6 +92,7 @@ class _OnBoardingContentState extends State<OnBoardingContent> {
                   context,
                   MaterialPageRoute(builder: (context) => const LoginView()),
                 );
+                CacheHelper.sharedPreferences.setBool("onboarding", true);
               },
             ),
           ),

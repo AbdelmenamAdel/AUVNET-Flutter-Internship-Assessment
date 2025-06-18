@@ -1,3 +1,5 @@
+import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_bloc.dart';
+import 'package:auvnet_internship_task/core/di/services_locator.dart';
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:auvnet_internship_task/generated/app_images.dart';
@@ -9,8 +11,6 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.topLeft,
-      height: 190,
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -19,8 +19,8 @@ class CustomAppBar extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.only(
-          bottomRight: Radius.circular(48),
-          bottomLeft: Radius.circular(48),
+          bottomRight: Radius.circular(25),
+          bottomLeft: Radius.circular(25),
         ),
       ),
       child: Padding(
@@ -41,7 +41,6 @@ class CustomAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  spacing: 7,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -53,7 +52,10 @@ class CustomAppBar extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Hi hepa!',
+                      "Hi, Hepa!",
+                      // "Hi" + sl<AuthBloc>().userInfo['fullName'] ??
+                      //     'Hepa'
+                      //         "!",
                       style: TextStyle(
                         fontSize: 30,
                         fontFamily: AppFonts.rubik,
@@ -63,14 +65,11 @@ class CustomAppBar extends StatelessWidget {
                     ),
                   ],
                 ),
-                FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Image.asset(
-                    Assets.girl,
-                    height: 80,
-                    width: 80,
-                    fit: BoxFit.contain,
-                  ),
+                Image.asset(
+                  Assets.girl,
+                  height: 60,
+                  width: 60,
+                  fit: BoxFit.fill,
                 ),
               ],
             ),

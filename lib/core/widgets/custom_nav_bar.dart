@@ -1,4 +1,5 @@
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
@@ -33,10 +34,11 @@ class CustomNavBar extends StatelessWidget {
         FittedBox(
           child: Text(
             item.title!,
-            style: item.textStyle.apply(
+            style: TextStyle(
               color: isSelected
                   ? AppColor.primary
                   : item.inactiveForegroundColor,
+              fontSize: 12,
             ),
           ),
         ),
@@ -47,10 +49,16 @@ class CustomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final double itemWidth =
         (MediaQuery.of(context).size.width -
-            navBarDecoration.padding.horizontal) /
+            navBarDecoration.padding.horizontal * 2) /
         navBarConfig.items.length;
     return DecoratedNavBar(
-      decoration: navBarDecoration,
+      decoration: NavBarDecoration(
+        padding: EdgeInsets.symmetric(
+          vertical: 0,
+          horizontal: navBarDecoration.padding.horizontal,
+        ),
+        color: navBarDecoration.color,
+      ),
       height: height,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -61,13 +69,13 @@ class CustomNavBar extends StatelessWidget {
                 duration: itemAnimationProperties.duration,
                 curve: itemAnimationProperties.curve,
                 width: itemWidth * navBarConfig.selectedIndex,
-                height: 6,
+                height: 8,
               ),
               AnimatedContainer(
                 duration: itemAnimationProperties.duration,
                 curve: itemAnimationProperties.curve,
                 width: itemWidth,
-                height: 6,
+                height: 8,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: AppColor.primary,

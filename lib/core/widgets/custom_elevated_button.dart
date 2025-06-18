@@ -3,8 +3,8 @@ import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key, required this.text, this.onPressed});
-  final String text;
+  const CustomElevatedButton({super.key, this.text, this.onPressed});
+  final String? text;
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -15,14 +15,16 @@ class CustomElevatedButton extends StatelessWidget {
         backgroundColor: AppColor.primary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 16,
-          fontFamily: AppFonts.dmsans,
-        ),
-      ),
+      child: text != null
+          ? Text(
+              text!,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontFamily: AppFonts.dmsans,
+              ),
+            )
+          : const CircularProgressIndicator(color: Colors.white),
     );
   }
 }

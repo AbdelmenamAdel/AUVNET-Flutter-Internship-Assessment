@@ -1,4 +1,8 @@
+import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_bloc.dart';
+import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_event.dart';
 import 'package:auvnet_internship_task/Features/home/home_view.dart';
+import 'package:auvnet_internship_task/Features/welcome/views/on_boarding.dart';
+import 'package:auvnet_internship_task/core/di/services_locator.dart';
 import 'package:auvnet_internship_task/core/widgets/custom_nav_bar.dart';
 import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:flutter/material.dart';
@@ -9,45 +13,39 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PersistentTabView(
-        tabs: [
-          PersistentTabConfig(
-            screen: HomeView(),
-            item: ItemConfig(icon: Image.asset(Assets.nav1), title: "Home"),
+    return PersistentTabView(
+      tabs: [
+        PersistentTabConfig(
+          screen: HomeView(),
+          item: ItemConfig(icon: Image.asset(Assets.nav1), title: "Home"),
+        ),
+        PersistentTabConfig(
+          screen: EmptyScreen(text: "Categories"),
+          item: ItemConfig(
+            icon: Icon(Icons.category_outlined),
+            title: "Categories",
           ),
-          PersistentTabConfig(
-            screen: EmptyScreen(text: "Categories"),
-            item: ItemConfig(
-              icon: Icon(Icons.category_outlined),
-              title: "Categories",
-            ),
+        ),
+        PersistentTabConfig(
+          screen: EmptyScreen(text: "Deliver"),
+          item: ItemConfig(
+            icon: Icon(Icons.delivery_dining_outlined),
+            title: "Deliver",
           ),
-          PersistentTabConfig(
-            screen: EmptyScreen(text: "Deliver"),
-            item: ItemConfig(
-              icon: Icon(Icons.delivery_dining_outlined),
-              title: "Deliver",
-            ),
+        ),
+        PersistentTabConfig(
+          screen: EmptyScreen(text: "Cart"),
+          item: ItemConfig(
+            icon: Icon(Icons.shopping_cart_outlined),
+            title: "Cart",
           ),
-          PersistentTabConfig(
-            screen: EmptyScreen(text: "Cart"),
-            item: ItemConfig(
-              icon: Icon(Icons.shopping_cart_outlined),
-              title: "Cart",
-            ),
-          ),
-          PersistentTabConfig(
-            screen: EmptyScreen(text: "Profile"),
-            item: ItemConfig(
-              icon: Icon(Icons.person_outline),
-              title: "Profile",
-            ),
-          ),
-        ],
-        navBarBuilder: (navBarConfig) =>
-            CustomNavBar(navBarConfig: navBarConfig),
-      ),
+        ),
+        PersistentTabConfig(
+          screen: EmptyScreen(text: "Profile"),
+          item: ItemConfig(icon: Icon(Icons.person_outline), title: "Profile"),
+        ),
+      ],
+      navBarBuilder: (navBarConfig) => CustomNavBar(navBarConfig: navBarConfig),
     );
   }
 }
@@ -57,6 +55,18 @@ class EmptyScreen extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(text));
+    return Center(
+      child: InkWell(
+        onTap: () {
+          sl<AuthBloc>().add(AuthLogoutRequested());
+
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => OnboardingScreen()),
+          );
+        },
+        child: Text("Logout"),
+      ),
+    );
   }
 }
