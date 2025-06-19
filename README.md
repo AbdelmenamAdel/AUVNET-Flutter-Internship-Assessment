@@ -42,11 +42,6 @@ Nawel is a simple mobile e-commerce app featuring:
 - **Home Screen:** Personalized with user info, shortcuts, and services.
 - **Categories, Cart, Deliver, Profile** views with persistent navigation.
 
-<p align="center">
-  <img src="assets/screenshots/app_image1.png" width="90%" />
-  <img src="assets/screenshots/app_image2.png" width="90%" />
-</p>
-
 ---
 
 ## 📁 File Structure
@@ -59,7 +54,9 @@ Nawel is a simple mobile e-commerce app featuring:
 
 ![3](https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/app_image2.png)
 
-![4](https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/profile.jpg)
+<p align="left">
+  <img src="https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/profile.jpg" width="30%" height = "70%"/>
+</p>
 
 
 ## 🛠 Dependencies
