@@ -49,10 +49,56 @@ Nawel is a simple mobile e-commerce app featuring:
 
 ---
 
-## 🚀 Getting Started
+## 📁 File Structure
 
-1. **Clone the Repository:**
+![image](https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/structure.png)
 
-   ```bash
-   git clone https://github.com/yourusername/nawel.git
-   cd nawel
+## 📱 UI
+
+![2](https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/app_image1.png)
+
+![3](https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/app_image2.png)
+
+![4](https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/profile.jpg)
+
+
+## 🛠 Dependencies
+
+```pubspec.yaml
+  device_preview:
+  equatable:
+  flutter_bloc: 
+  flutter_svg:
+  get_it: 
+  hive_flutter:
+  image_picker:
+  path:
+  persistent_bottom_nav_bar_v2:
+  shared_preferences:
+  smooth_page_indicator:
+  supabase_flutter:
+```
+
+## ☢️ Usage & 🚀 Getting Started
+
+1. **Clone the repository** : git clone https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment.git
+
+2. **Open the project in your preferred Flutter IDE.**
+
+3. **Explore the `lib` directory:**
+
+    - Review the project structure to understand the core of the app.
+    - Customize the app of your need.
+
+4. **Run the app on an emulator or physical device:**
+
+    ```bash
+    flutter run
+    ```
+
+## 🚨 Contributing
+
+- Contributions are welcome 💜
+- If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+
