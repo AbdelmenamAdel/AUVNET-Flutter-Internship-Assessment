@@ -1,6 +1,5 @@
 import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_bloc.dart';
 import 'package:auvnet_internship_task/Features/welcome/views/splash_view.dart';
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
