@@ -1,7 +1,10 @@
 import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_bloc.dart';
+import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_event.dart';
 import 'package:auvnet_internship_task/Features/profile/widgets/get_image_url.dart';
+import 'package:auvnet_internship_task/core/di/services_locator.dart';
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:restart_app/restart_app.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -107,6 +110,13 @@ class ProfileView extends StatelessWidget {
               ),
             ),
           ),
+        ),
+        InkWell(
+          onTap: () {
+            sl<AuthBloc>().add(AuthLogoutRequested());
+            Restart.restartApp();
+          },
+          child: Text("Logout", style: TextStyle(fontSize: 16)),
         ),
       ],
     );

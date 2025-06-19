@@ -85,15 +85,12 @@ class EmptyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: InkWell(
-        onTap: () {},
-        child: Text(
-          'Stay Tuned!',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: AppColor.primary,
-          ),
+      child: Text(
+        'Stay Tuned!',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 24,
+          color: AppColor.primary,
         ),
       ),
     );

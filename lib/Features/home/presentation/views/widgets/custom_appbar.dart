@@ -1,7 +1,7 @@
 import 'package:auvnet_internship_task/Features/auth/presentation/manager/auth_bloc.dart';
+import 'package:auvnet_internship_task/Features/profile/widgets/get_image_url.dart';
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
-import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -62,11 +62,20 @@ class CustomAppBar extends StatelessWidget {
                     ),
                   ],
                 ),
-                Image.asset(
-                  Assets.girl,
-                  height: 60,
-                  width: 60,
-                  fit: BoxFit.fill,
+                Container(
+                  height: 70,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.network(
+                      UserImages.userImages[1],
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ],
             ),

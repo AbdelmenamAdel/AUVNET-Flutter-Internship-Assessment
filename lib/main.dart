@@ -20,10 +20,11 @@ void main() async {
     ),
   );
   runApp(
-    DevicePreview(
-      enabled: true, // Set to true to enable Device Preview
-      builder: (context) => const MyApp(),
-    ),
+    // DevicePreview(
+    //   enabled: true, // Set to true to enable Device Preview
+    //   builder: (context) => ,
+    // ),
+    const MyApp(),
   );
 }
 
