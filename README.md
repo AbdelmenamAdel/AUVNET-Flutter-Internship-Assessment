@@ -51,13 +51,13 @@ Nawel is a simple mobile e-commerce app featuring:
 ## 📱 UI
 
 <p align="left">
-  
-
   <img src="https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/app_image1.png" width="90%"/>
   <img src="https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/app_image2.png" width="90%"/>
-  <img src="https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/profile.jpg" width="30%" height = "50%"/>
+  <img src="https://github.com/AbdelmenamAdel/AUVNET-Flutter-Internship-Assessment/blob/main/assets/images/profile.jpg" width="30%" height="50%"/>
 </p>
 
+## 🎥 Video
+https://github.com/user-attachments/assets/8d6905cb-6a24-41ff-b8a6-b049254e4e7d
 
 ## 🛠 Dependencies
 
