@@ -1,17 +1,10 @@
+import 'package:auvnet_internship_task/Features/home/data/models/home_data_model.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class ResturantWidget extends StatelessWidget {
-  const ResturantWidget({
-    super.key,
-    required this.image,
-    required this.text,
-    required this.time,
-  });
-
-  final String image;
-  final String text;
-  final String time;
+  const ResturantWidget({super.key, required this.restaurantsModels});
+  final HomeDataModel restaurantsModels;
 
   @override
   Widget build(BuildContext context) {
@@ -43,14 +36,20 @@ class ResturantWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Center(child: Image.asset(image, width: 60, height: 60)),
+              child: Center(
+                child: Image.network(
+                  restaurantsModels.image,
+                  width: 60,
+                  height: 60,
+                ),
+              ),
             ),
           ),
         ),
         const SizedBox(height: 4),
         // Wrapping Text within container width
         Text(
-          text,
+          restaurantsModels.title,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.center,
@@ -70,7 +69,7 @@ class ResturantWidget extends StatelessWidget {
               size: 16,
             ),
             Text(
-              time,
+              restaurantsModels.subTitle,
               style: TextStyle(
                 fontFamily: AppFonts.dmsans,
                 fontWeight: FontWeight.w500,

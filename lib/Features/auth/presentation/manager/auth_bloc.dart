@@ -34,11 +34,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         return;
       }
 
-      userInfo = await SupabaseConfig.client
-          .from('users')
-          .select()
-          .eq('id', response.user!.id)
-          .maybeSingle();
+      getUserInfo();
 
       if (userInfo == null) {
         emit(

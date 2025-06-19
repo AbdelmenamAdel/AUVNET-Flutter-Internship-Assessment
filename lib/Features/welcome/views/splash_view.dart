@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:auvnet_internship_task/Features/auth/presentation/views/login_view.dart';
 import 'package:auvnet_internship_task/Features/main/main_view.dart';
 import 'package:auvnet_internship_task/Features/welcome/views/on_boarding.dart';
@@ -28,8 +26,7 @@ class _SplashViewState extends State<SplashView> {
         CacheHelper.sharedPreferences.getBool("isAuthenticated") ?? false;
     bool isOnboarding =
         CacheHelper.sharedPreferences.getBool("onboarding") ?? false;
-    log("isAuthenticated: $isAuthenticated");
-    log("isOnboarding: $isOnboarding");
+
     if (isAuthenticated) {
       Navigator.pushReplacement(
         context,

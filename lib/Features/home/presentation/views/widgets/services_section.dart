@@ -1,3 +1,4 @@
+import 'package:auvnet_internship_task/Features/home/data/models/home_data_model.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:auvnet_internship_task/generated/app_images.dart';
 import 'package:flutter/material.dart';
@@ -5,24 +6,10 @@ import 'package:flutter_svg/svg.dart';
 import 'service_widget.dart';
 
 class ServicesSection extends StatelessWidget {
-  const ServicesSection({super.key});
-
+  const ServicesSection({super.key, required this.servicesModels});
+  final List<HomeDataModel> servicesModels;
   @override
   Widget build(BuildContext context) {
-    final List services = [
-      {'image': Assets.food, 'roundedText': 'Up to 50%', 'text': 'Food'},
-      {
-        'image': Assets.drinks,
-        'roundedText': '20 mins',
-        'text': 'Health & wellness',
-      },
-      {
-        'image': Assets.groceries,
-        'roundedText': '15 mins',
-        'text': 'Groceries',
-      },
-    ];
-
     return Column(
       spacing: 20,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,12 +26,8 @@ class ServicesSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: List.generate(
-            services.length,
-            (index) => ServiceWidget(
-              image: services[index]['image'],
-              roundedText: services[index]['roundedText'],
-              text: services[index]['text'],
-            ),
+            servicesModels.length,
+            (index) => ServiceWidget(model: servicesModels[index]),
           ),
         ),
         Container(

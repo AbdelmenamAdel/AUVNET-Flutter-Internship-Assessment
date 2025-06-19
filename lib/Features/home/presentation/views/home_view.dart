@@ -1,4 +1,7 @@
-import 'package:auvnet_internship_task/Features/home/widgets/custom_appbar.dart';
+import 'package:auvnet_internship_task/Features/home/data/models/home_data_model.dart';
+import 'package:auvnet_internship_task/Features/home/presentation/views/widgets/custom_appbar.dart';
+import 'package:auvnet_internship_task/Features/home/presentation/views/widgets/home_data.dart';
+import 'package:auvnet_internship_task/core/database/remote/supabase_config.dart';
 import 'package:flutter/material.dart';
 import 'widgets/resturant_sectioin.dart';
 import 'widgets/services_section.dart';
@@ -21,9 +24,9 @@ class HomeView extends StatelessWidget {
             child: Column(
               spacing: 16,
               children: [
-                ServicesSection(),
+                ServicesSection(servicesModels: HomeData.services),
                 ShortCutSection(),
-                ResturantSection(),
+                ResturantSection(restaurantsModels: HomeData.restaurants),
               ],
             ),
           ),

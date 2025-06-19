@@ -1,17 +1,11 @@
+import 'package:auvnet_internship_task/Features/home/data/models/home_data_model.dart';
 import 'package:auvnet_internship_task/core/utils/app_color.dart';
 import 'package:auvnet_internship_task/core/utils/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class ServiceWidget extends StatelessWidget {
-  const ServiceWidget({
-    super.key,
-    required this.image,
-    required this.roundedText,
-    required this.text,
-  });
-  final String image;
-  final String roundedText;
-  final String text;
+  const ServiceWidget({super.key, required this.model});
+  final HomeDataModel model;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,7 +18,7 @@ class ServiceWidget extends StatelessWidget {
             color: AppColor.containerColor.withOpacity(0.3),
             borderRadius: BorderRadius.circular(12),
           ),
-          child: Center(child: Image.asset(image)),
+          child: Center(child: Image.network(model.image)),
         ),
         Container(
           height: 24,
@@ -34,7 +28,7 @@ class ServiceWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(
-            roundedText,
+            model.subTitle,
             style: TextStyle(
               fontSize: 12,
               fontFamily: AppFonts.dmsans,
@@ -44,7 +38,7 @@ class ServiceWidget extends StatelessWidget {
           ),
         ),
         Text(
-          text,
+          model.title,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.center,
